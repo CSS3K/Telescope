@@ -1,6 +1,6 @@
 <template name="nav">
-  <header class="header grid">
-
+  <header class="header">
+    <div class="header-content grid">
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>Menu</span></a>
     
     <ul class="nav site-nav desktop">
@@ -48,9 +48,9 @@
       <h1 class="logo"><a href="/">{{site_title}}</a></h1>
     {{/if}}
     
-    {{#if canView}}
+    {{#if canPost}}
     <ul class="nav user-nav desktop">
-      <li><a id="submit" class="submit button" href="/submit">Post</a></li>
+      <li><a id="submit" class="submit button" href="/submit">Publish</a></li>
     </ul>
     {{/if}}
     
@@ -58,5 +58,6 @@
       {{loginButtons align="right"}}
     </div>
 
+    </div>
   </header>
 </template>
