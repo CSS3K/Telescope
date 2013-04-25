@@ -1,14 +1,22 @@
 <template name="nav">
   <header class="header">
+
+    {{#if logo_url}}
+      <h1 class="logo image" style="height:{{logo_height}}px; width:{{logo_width}}px; top:{{logo_top}}px; margin-left:{{logo_offset}}px;">
+        <a href="/">
+          <img src="{{logo_url}}" style="height:{{logo_height}}px;" alt="{{site_title}}"/>
+        </a>
+      </h1>
+    {{else}}
+      <h1 class="logo"><a href="/">{{site_title}}</a></h1>
+    {{/if}}
+    
     <div class="header-content grid">
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>Menu</span></a>
     
     <ul class="nav site-nav desktop">
       {{#if canView}}
-      <li><a class="top" href="/top">Top</a></li>
-      <li><a class="new" href="/new">New</a></li>
-      <li><a class="best" href="/best">Best</a></li>
-      <li><a class="digest" href="/digest">Digest</a></li>
+      <li><a class="new" href="/new">Recent</a></li>
       {{/if}}
       {{#if hasCategories}}
       <li class="dropdown">
@@ -37,16 +45,6 @@
       </li>
       {{/if}}
     </ul>
-    
-    {{#if logo_url}}
-      <h1 class="logo image" style="height:{{logo_height}}px; width:{{logo_width}}px; top:{{logo_top}}px; margin-left:{{logo_offset}}px;">
-        <a href="/">
-          <img src="{{logo_url}}" style="height:{{logo_height}}px;" alt="{{site_title}}"/>
-        </a>
-      </h1>
-    {{else}}
-      <h1 class="logo"><a href="/">{{site_title}}</a></h1>
-    {{/if}}
     
     {{#if canPost}}
     <ul class="nav user-nav desktop">
