@@ -738,9 +738,32 @@ body.pageslide-open {
       -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); 
+
+      display: none;
+      position: absolute;
+      right: 0;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      top: 70px;
+      margin-left: -70px;
+      z-index: 2;
+      background: #121821;
   }
       .dropdown .dropdown-menu ul li a {
-        font-size: 14px; 
+        top: 0;
+        margin: 0;
+        padding: 0 0 0 25px;
+        width: 150px;
+        height: 45px;
+        display: block;
+        color: #eceef1;
+        background: #121821;
+        font: bold 16px/45px "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
   .dropdown:hover .dropdown-menu {
     display: block; 
@@ -852,6 +875,7 @@ body.pageslide-open {
     position: relative;
     z-index: 20; 
     display: inline-block;
+    margin-top: 22px;
   }
 
 .auth-buttons {
