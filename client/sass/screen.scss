@@ -30,8 +30,21 @@
 @import "modules/user-profile";
 @import "modules/errors";
 @import "modules/notifications";
+@import "modules/badges";
+
+@import "modules/shame";
 
 @import "partials/mobile";
 
+
 @import "themes/default";
 @import "themes/telescope";
+
+html, body {
+  height: 100%;
+  min-height: 100%; }
+
+body, input, select, button, textarea {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
+}
