@@ -716,7 +716,8 @@ body.pageslide-open {
   min-height: 40px;
   margin-bottom: 1px;
   margin-right: 160px;
-  border-radius: 0; }
+  border-radius: 0;
+  box-shadow: none; }
   .post-content:first-child {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
